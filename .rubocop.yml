@@ -9,7 +9,7 @@ AllCops:
     - "node_modules"
   DisplayCopNames: true
 
-Layout/LineLength:
+Metrics/LineLength:
   Max: 140
 Metrics/MethodLength:
   Include: ["app/controllers/*"]
