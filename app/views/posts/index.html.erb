@@ -1,29 +1,19 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Posts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Content</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="container post-container">
+  <div class="content-box">
+    <%= render 'layouts/new_post'%>
+  </div>
+  <div class = "content-box">
     <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.content %></td>
-        <td><%= post.user_id %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="post-card">
+        <h4> <%= post.user.first_name.capitalize %> </h4>
+        <p class="post-date"> <%= post.created_at.strftime("%B %d at %H:%M") %></p>
+        <p> <%= post.content %> </p>
+        <div class="card-buttons">
+          <a class="btn-flat"><i class="material-icons left">thumb_up</i>Like</a>
+          <a class="darken-4 btn-flat"><i class="material-icons left">comment</i>comment</a>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+  </div>
+</div>

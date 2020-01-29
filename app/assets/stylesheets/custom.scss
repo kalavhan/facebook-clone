@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #e9ebee;
+}
+
 header {
   width: 100%;
   nav {
@@ -21,7 +25,7 @@ header {
     right: 20px;
     display: flex !important;
     justify-content: space-between;
-    width: 550px;
+    width: 700px;
 
     input[type=email],
     input[type=password]{
@@ -49,5 +53,85 @@ header {
         border: 1px solid rgb(51, 40, 40);
       }
     }
+    
+    input[type=checkbox] {
+      opacity: 1 !important;
+
+    }
   }
+}
+
+.mid {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  height: 100% !important;
+}
+
+.content-box {
+  width: 500px;
+  margin: auto; 
+}
+
+.post-container {
+  padding-top: 10px;
+}
+
+.textarea { 
+  width: 100% !important;
+  height: 100px;
+  font-size: 16px;
+  background-color: white !important;
+  border: none;
+  resize: none;
+  margin-right: 30px;
+  padding: 22px;
+  margin-top: -5px !important;
+    &::placeholder {
+      color: #8D949E;
+    }
+}
+
+.new-post-button {
+  width: 100%;
+  border: none;
+  background-color: #3b5998;
+  color: white;
+  padding: 7px 15px;
+}
+
+.post-card {
+  background-color: #fff;
+  padding: 15px;
+  margin-top: 20px;
+
+  h4 {
+    margin: 0 !important;
+    font-size: 16px;
+    color: #3d62b4;
+  }
+
+  i {
+    font-size: 17px;
+  }
+}
+
+.post-date {
+  color: #616770;
+  font-size: 12px;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+
+    a {
+      color: #fff;
+      background-color: #3b5998;
+      &:hover {
+        color: #fff;
+        background-color: #3b5998;
+      }
+    }
 }

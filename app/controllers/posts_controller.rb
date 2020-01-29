@@ -1,10 +1,13 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :authorize, only: [:index]
 
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+
+    @post = Post.new
+    @posts = Post.where(user_id: current_user.id)
   end
 
   # GET /posts/1
@@ -25,6 +28,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
+    @post.user_id = current_user.id
 
     respond_to do |format|
       if @post.save
