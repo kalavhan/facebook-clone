@@ -1,8 +1,8 @@
 <%= form_for(:user, :url => session_path(:user)) do |f| %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email"%>
 
-    <%= f.password_field :password, autocomplete: "current-password" %>
-    <div class="field">
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password"%>
+    <div class="field check-box">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>

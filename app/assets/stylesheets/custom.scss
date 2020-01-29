@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+*::placeholder {
+  color: #8D949E;
+}
+
 body {
   background-color: #e9ebee;
 }
@@ -16,6 +20,16 @@ header {
 
     h2 {
       color: #fff !important;
+    }
+
+    ul {
+      li {
+        a {
+          &:visited {
+            color: white !important;
+          }
+        }
+      }
     }
   }
   position: relative;
@@ -56,7 +70,19 @@ header {
     
     input[type=checkbox] {
       opacity: 1 !important;
+      margin-left: -20px !important;
+    }
 
+    .check-box {
+      margin-top: 5px !important;
+    }
+  }
+
+  .big-logo {
+    color: white !important;
+
+    &:hover {
+      background-color: inherit;
     }
   }
 }
@@ -87,9 +113,6 @@ header {
   margin-right: 30px;
   padding: 22px;
   margin-top: -5px !important;
-    &::placeholder {
-      color: #8D949E;
-    }
 }
 
 .new-post-button {
@@ -134,4 +157,51 @@ header {
         background-color: #3b5998;
       }
     }
+}
+
+.big-container {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.flex-items {
+  display: flex;
+  width: 78%;
+  margin: 0 auto;
+
+  .image {
+    margin-top: -50px;
+    height: 350px;
+    background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yi/r/OBaVg52wtTZ.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .card {
+    width: 450px;
+    padding: 20px;
+    margin-left: 20px;
+  }
+
+  h4 {
+    margin: 50px 0 0 0;
+    font-size: 23px;
+    font-weight: bold;
+  }
+
+  .hero-section {
+    max-width: 500px;
+  }
+}
+
+.user {
+  width: 35%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  
+  img {
+    border-radius: 50%;
+  }
 }
