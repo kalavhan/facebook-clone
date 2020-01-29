@@ -1,7 +1,14 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  devise_for :users, controllers: { registrations: 'users/registrations' }
+  resources :posts
+  devise_for :users,
+  :skip => [:registrations]
+  root to: "posts#index"
 
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  devise_scope :user do
+    get "/profile", to: "users/registrations#show"
+    get "/signup", to: "users/registrations#new", as: :signup
+    post "user/sign_up", to: "users/registrations#create", as: :user_registration
+  end
 end
