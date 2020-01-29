@@ -1,11 +1,11 @@
 <header>
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
+      <a href="#" class="brand-logo big-logo">Fakebook</a>
       <% if user_signed_in? %>
         <ul id="nav-mobile" class="right hide-on-med-and-down mid">
-          <li><a href="sass.html">Home</a></li>
-          <li><a href="badges.html">Profile</a></li>
+          <li><%= link_to "Home", root_path %></a></li>
+          <li><%= link_to "Profile", profile_path %></a></li>
           <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></a></li>
         </ul>
       <% else %>

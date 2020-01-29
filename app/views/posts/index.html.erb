@@ -6,8 +6,13 @@
   <div class = "content-box">
     <% @posts.each do |post| %>
       <div class="post-card">
-        <h4> <%= post.user.first_name.capitalize %> </h4>
-        <p class="post-date"> <%= post.created_at.strftime("%B %d at %H:%M") %></p>
+        <div class="user">
+          <%= gravatar_for post.user, size: 50 %>
+          <div class="name-date">
+            <h4> <%= post.user.first_name.capitalize %> </h4>
+            <p class="post-date"> <%= post.created_at.strftime("%B %d at %H:%M") %></p>
+          </div>
+        </div>
         <p> <%= post.content %> </p>
         <div class="card-buttons">
           <a class="btn-flat"><i class="material-icons left">thumb_up</i>Like</a>
