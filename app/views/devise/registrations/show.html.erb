@@ -1,7 +1,10 @@
 <div class="container">
-  <div class="flex">
-    <%= gravatar_for current_user, size: 130 %>
-    <p class="name"> <%= @user.first_name %> <%= @user.last_name %> </p>
+  <div class="user-hero-section">
+    <div class="flex">
+      <%= gravatar_for current_user, size: 130 %>
+      <p class="name"> <%= @user.first_name %> <%= @user.last_name %> </p>
+    </div>
+    <%= link_to "Update Profile", user_edit_path, class: 'btn-flat update-btn' %>
   </div>
   <div class="content-box">
     <% @posts.each do |post| %>

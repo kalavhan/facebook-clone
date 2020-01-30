@@ -258,9 +258,6 @@ header {
 }
 .flex {
   display: flex;
-  padding-top: 20px;
-  background-color:#1c1e21;
-  padding: 60px 15px 15px 25px;
 
   img {
     border-radius: 50%;
@@ -274,3 +271,55 @@ header {
   padding-bottom: 20px;
   color: #fff;
 }
+
+.user-hero-section {
+  display: flex;
+  justify-content: space-between;
+  background-color:#1c1e21;
+  padding: 60px 15px 15px 25px;
+
+  .update-btn {
+    background: #f5f6f7;
+    border-color:rgba(0, 0, 0, .4); 
+    align-self: flex-end; 
+    color: #4b4f56; 
+  }
+}
+
+.update-section {
+  padding: 20px;
+  width: 450px;
+  margin: 0 auto;
+
+  form {
+    input[type=text],
+    textarea {
+      border: 1px solid #8b8d8f !important;
+      border-radius: 5px !important;
+      box-sizing: border-box !important;
+    }
+
+    input[type=text] {
+      padding: 0 0 0 15px !important;
+    }
+
+    textarea {
+      height: 70px;
+      resize: none;
+      padding: 10px 0 0 15px !important;
+    }
+
+    input[type=submit] {
+      width: 100%;
+      background-color: #3b5998;
+      padding: 10px 0;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+
+    select {
+      display: block !important;
+    }
+  }
+} 

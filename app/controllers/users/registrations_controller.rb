@@ -16,9 +16,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   # GET /resource/edit
-  # def edit
-  #   super
-  # end
+  def edit
+    super
+    @user = current_user
+  end
+
   def show
     # redirect_to signup_path unless user_signed_in?
     @user = current_user
@@ -26,48 +28,27 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   # PUT /resource
-  # def update
-  #   super
-  # end
-
-  # DELETE /resource
-  # def destroy
-  #   super
-  # end
-
-  # GET /resource/cancel
-  # Forces the session data which is usually expired after sign
-  # in to be expired now. This is useful if the user wants to
-  # cancel oauth signing in/up in the middle of the process,
-  # removing all OAuth session data.
-  # def cancel
-  #   super
-  # end
-
-  # protected
-
-  # If you have extra params to permit, append them to the sanitizer.
-   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up) do |u|
-      u.permit(:email, :password, :password_confirmation, :first_name, :last_name)
+  def update
+    if @user.update(user_params)
+      redirect_to root_path
+    else
+      render :edit
     end
-   end
-  # If you have extra params to permit, append them to the sanitizer.
-  # def configure_account_update_params
-  #   devise_parameter_sanitizer.permit(:account_update, keys: [:attribute])
-  # end
+  end
+
+  private
+
+  def configure_sign_up_params
+  devise_parameter_sanitizer.permit(:sign_up) do |u|
+    u.permit(:email, :password, :password_confirmation, :first_name, :last_name)
+  end
+  end
+
+  def user_params
+    params[:user].permit(:first_name, :last_name, :gender, :link_image, :location, :date_of_birth, :status, :bio)
+  end
 
   def user_signed_in?
     super
   end
-
-  # The path used after sign up.
-  # def after_sign_up_path_for(resource)
-  #   super(resource)
-  # end
-
-  # The path used after sign up for inactive accounts.
-  # def after_inactive_sign_up_path_for(resource)
-  #   super(resource)
-  # end
 end
