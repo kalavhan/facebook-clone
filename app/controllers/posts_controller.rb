@@ -22,13 +22,11 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user_id = current_user.id
 
-    respond_to do |format|
-      if @post.save
-        redirect_to root_path
-      else
-        @posts = Post.where(user_id: current_user.id)
-        render :index
-      end
+    if @post.save
+      redirect_to root_path
+    else
+      @posts = Post.where(user_id: current_user.id)
+      render :index
     end
   end
 
