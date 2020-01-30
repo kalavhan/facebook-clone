@@ -215,6 +215,7 @@ header {
         box-sizing: border-box;
         padding: 0 0 0 10px;
         border-radius: 5px;
+        margin: 0 0 1px 0;
       }
 
       input[type='submit'] {
@@ -249,4 +250,27 @@ header {
   img {
     border-radius: 50%;
   }
+}
+
+#danger {
+  margin: 0;
+  padding-top: 10px;
+}
+.flex {
+  display: flex;
+  padding-top: 20px;
+  background-color:#1c1e21;
+  padding: 60px 15px 15px 25px;
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+.name {
+  margin: 0 0 0 15px;
+  align-self: flex-end;
+  font-size: 23px;
+  padding-bottom: 20px;
+  color: #fff;
 }

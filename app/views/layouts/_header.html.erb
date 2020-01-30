@@ -6,7 +6,7 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down mid">
           <li><%= link_to "Home", root_path %></a></li>
           <li><%= link_to "Profile", profile_path %></a></li>
-          <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></a></li>
+          <li><%= link_to "Log out", signout_path, method: :delete %></a></li>
         </ul>
       <% else %>
         <ul>

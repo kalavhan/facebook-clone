@@ -1,6 +1,6 @@
-<p id="notice"><%= notice %></p>
 <div class="container post-container">
   <div class="content-box">
+    <%= render "shared/error_messages", resource: @post %>
     <%= render 'layouts/new_post'%>
   </div>
   <div class = "content-box">

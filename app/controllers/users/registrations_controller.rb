@@ -22,6 +22,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def show
     # redirect_to signup_path unless user_signed_in?
     @user = current_user
+    @posts = Post.where(user_id: current_user.id)
   end
 
   # PUT /resource
