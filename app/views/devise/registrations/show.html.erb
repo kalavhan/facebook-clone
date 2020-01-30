@@ -6,22 +6,32 @@
     </div>
     <%= link_to "Update Profile", user_edit_path, class: 'btn-flat update-btn' %>
   </div>
-  <div class="content-box">
-    <% @posts.each do |post| %>
-      <div class="post-card">
-        <div class="user">
-          <%= gravatar_for post.user, size: 50 %>
-          <div class="name-date">
-            <h4> <%= post.user.first_name.capitalize %> </h4>
-            <p class="post-date"> <%= post.created_at.strftime("%B %d at %H:%M") %></p>
+  <div class="user-info">
+    <div class="card details">
+      <ul>
+        <li><i class="material-icons">public</i><p>Bio: <%= @user.bio %></p></li>
+        <li><i class="material-icons">people</i><p>Gender: <%= @user.gender %></p></li>
+        <li><i class="material-icons">home</i><p>Location: <%= @user.location %></p></li>
+        <li><i class="material-icons">favorite</i><p>Relationship Status: <%= @user.status %></p></li>
+      </ul>
+    </div>
+    <div class="posts">
+      <% @posts.each do |post| %>
+        <div class="post-card">
+          <div class="user">
+            <%= gravatar_for post.user, size: 50 %>
+            <div class="name-date">
+              <h4> <%= post.user.first_name.capitalize %> </h4>
+              <p class="post-date"> <%= post.created_at.strftime("%B %d at %H:%M") %></p>
+            </div>
+          </div>
+          <p> <%= post.content %> </p>
+          <div class="card-buttons">
+            <a class="btn-flat"><i class="material-icons left">thumb_up</i>Like</a>
+            <a class="darken-4 btn-flat"><i class="material-icons left">comment</i>comment</a>
           </div>
         </div>
-        <p> <%= post.content %> </p>
-        <div class="card-buttons">
-          <a class="btn-flat"><i class="material-icons left">thumb_up</i>Like</a>
-          <a class="darken-4 btn-flat"><i class="material-icons left">comment</i>comment</a>
-        </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>

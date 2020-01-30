@@ -323,3 +323,33 @@ header {
     }
   }
 } 
+
+.user-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .details {
+    width: 30%;
+    padding: 15px;
+    margin-top: 20px;
+    height: 250px;
+
+    ul {
+      li {
+        display: flex;
+        
+        i {
+          color: #90949c;
+          margin-top: 5px;
+          margin-right: 5px;
+          align-self: center;
+        }
+      }
+    }
+  }
+
+  .posts {
+    width: 55%;
+  }
+}
