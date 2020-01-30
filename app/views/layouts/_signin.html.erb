@@ -1,5 +1,5 @@
-<%= form_for(:user, :url => session_path(:user)) do |f| %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email"%>
+<%= form_for(:session, :url => signin_path(:session)) do |f| %>
+    <%= f.email_field :email, autocomplete: "email", placeholder: "Email"%>
 
     <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password"%>
     <div class="field check-box">

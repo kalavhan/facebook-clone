@@ -6,4 +6,6 @@ class User < ApplicationRecord
   has_many :posts
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :trackable
+  validates :first_name, presence: true, length: { maximum: 25 }
+  validates :last_name, presence: true, length: { maximum: 25 }
 end
