@@ -1,0 +1,39 @@
+<div class="container post-container">
+  <div class="content-box">
+    <%= render "shared/error_messages", resource: @comment %>
+  </div>
+  <div class = "content-box">
+      <div class="post-card">
+        <div class="user">
+          <%= gravatar_for @post.user, size: 50 %>
+          <div class="name-date">
+            <h4> <%= @post.user.first_name.capitalize %> </h4>
+            <p class="post-date"> <%= @post.created_at.strftime("%B %d at %H:%M") %></p>
+          </div>
+        </div>
+        <p> <%= @post.content %> </p>
+        <div class="card-buttons">
+          <%= link_to create_comment_path(@post), class:'darken-4 btn-flat' do %>
+            <i class="material-icons left">thumb_up</i> Like
+          <% end %>
+        </div>
+        <div class="new-comment">
+        <%= render 'layouts/comment_form' %>
+        </div>
+        <div class="users-comments">
+          <% @post.comments.each do |comment|%>
+          <div class="comment">
+            <%= gravatar_for comment.user, size: 50 %>
+            <div class= "comment-user-content">
+            <p>
+              <h4 class="comment-user"> <%= comment.user.first_name.capitalize %> <%= comment.user.last_name.capitalize %>  </h4>
+              <%= comment.content %>
+            </p>
+            </div>
+          </div>
+          <p class="comment-time"><%= time_ago_in_words(comment.created_at)  %></p>
+          <% end %>
+        </div>
+      </div>
+  </div>
+</div>

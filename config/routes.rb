@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get '/add_comment/:post_id', to: 'comments#new', as: :show_comment
+  post '/add_comment/:post_id', to: 'comments#create', as: :create_comment
   resources :posts
   devise_for :users,
   :skip => [:registrations, :sessions]
