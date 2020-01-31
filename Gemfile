@@ -10,6 +10,7 @@ gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 gem 'materialize-sass'
 # Use postgresql as the database for Active Record
 gem 'devise'
+gem 'omniauth-facebook'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'

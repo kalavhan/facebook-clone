@@ -18,7 +18,7 @@ class Users::SessionsController < Devise::SessionsController
   def destroy
     sign_out(current_user)
     redirect_to root_path
-   end
+  end
 
   def configure_sign_in_params
     devise_parameter_sanitizer.permit(:session) do |u|
