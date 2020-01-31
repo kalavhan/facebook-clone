@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
@@ -27,7 +29,7 @@ RSpec.describe User, type: :model do
     location = (0..41).map { ('a'..'z').to_a[rand(26)] }.join
     it { should allow_value('Amsterdam').for(:location) }
     it { should_not allow_value(location).for(:location) }
-    
+
     bio = (0..151).map { ('a'..'z').to_a[rand(26)] }.join
     it { should allow_value('Focused in coding, learn something new everyday').for(:bio) }
     it { should_not allow_value(bio).for(:bio) }

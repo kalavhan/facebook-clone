@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.feature 'Profile', type: :feature do
   before :each do
-    @user = User.create(first_name: 'User', last_name:'Smith', email: 'user@mail.com', password: '1234567')
+    @user = User.create(first_name: 'User', last_name: 'Smith', email: 'user@mail.com', password: '1234567')
     @post = Post.create(content: 'An awesome post', user_id: @user.id)
   end
 
