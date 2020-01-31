@@ -27,9 +27,17 @@
           </div>
           <p> <%= post.content %> </p>
           <div class="card-buttons">
-            <a class="btn-flat"><i class="material-icons left">thumb_up</i>Like</a>
-            <a class="darken-4 btn-flat"><i class="material-icons left">comment</i>comment</a>
+            <%= link_to show_comment_path(post), class:'darken-4 btn-flat' do %>
+              <i class="material-icons left">thumb_up</i> Like
+            <% end %>
+            <%= link_to show_comment_path(post), class:'darken-4 btn-flat' do %>
+              <i class="material-icons left">comment</i> comment
+            <% end %>
           </div>
+          <% if post.comments.any? %>
+            <p class="post-comments right-align right"><%= link_to "#{pluralize(post.comments.count, 'comment')}", show_comment_path(post) %></p>
+          <% end %>
+        <br>
         </div>
       <% end %>
     </div>
