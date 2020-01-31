@@ -129,6 +129,21 @@ header {
   margin-top: 20px;
   overflow-wrap: break-word;
 
+  .post-comments {
+    display: block;
+    padding-bottom: 15px;
+
+    a {
+      display: block;
+      color: #3b5998;
+
+      &:hover {
+        background-color: inherit;
+        color: #3b5998;
+      }
+    }
+  }
+
   h4 {
     margin: 0 !important;
     font-size: 16px;
@@ -150,21 +165,24 @@ header {
       height: 50px;
       display: flex;
       justify-content: space-between;
-      
+
       img {
         border-radius: 50%;
       }
 
-      .comment-user-content{
+      .comment-user-content {
         width: 87%;
-          .comment-user{
-            float: left;
-            margin-right: 5px !important;
-          }
+        .comment-user {
+          float: left;
+          margin-right: 5px !important;
+        }
       }
     }
+
     .comment-time {
       margin-left: 63px;
+      color: #8b8d8f;
+      margin-top: -2px;
     }
   }
 }
@@ -305,14 +323,14 @@ header {
 .user-hero-section {
   display: flex;
   justify-content: space-between;
-  background-color:#1c1e21;
+  background-color: #1c1e21;
   padding: 60px 15px 15px 25px;
 
   .update-btn {
     background: #f5f6f7;
-    border-color:rgba(0, 0, 0, .4); 
-    align-self: flex-end; 
-    color: #4b4f56; 
+    border-color: rgba(0, 0, 0, 0.4);
+    align-self: flex-end;
+    color: #4b4f56;
   }
 }
 
@@ -322,14 +340,14 @@ header {
   margin: 0 auto;
 
   form {
-    input[type=text],
+    input[type='text'],
     textarea {
       border: 1px solid #8b8d8f !important;
       border-radius: 5px !important;
       box-sizing: border-box !important;
     }
 
-    input[type=text] {
+    input[type='text'] {
       padding: 0 0 0 15px !important;
     }
 
@@ -339,7 +357,7 @@ header {
       padding: 10px 0 0 15px !important;
     }
 
-    input[type=submit] {
+    input[type='submit'] {
       width: 100%;
       background-color: #3b5998;
       padding: 10px 0;
@@ -352,7 +370,7 @@ header {
       display: block !important;
     }
   }
-} 
+}
 
 .user-info {
   width: 100%;
@@ -368,7 +386,7 @@ header {
     ul {
       li {
         display: flex;
-        
+
         i {
           color: #90949c;
           margin-top: 5px;

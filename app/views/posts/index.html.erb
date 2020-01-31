@@ -22,6 +22,10 @@
             <i class="material-icons left">comment</i> comment
           <% end %>
         </div>
+        <% if post.comments.any? %>
+          <p class="post-comments right-align right"><%= link_to "#{pluralize(post.comments.count, 'comment')}", show_comment_path(post) %></p>
+        <% end %>
+        <br>
       </div>
     <% end %>
   </div>
