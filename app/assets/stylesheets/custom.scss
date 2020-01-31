@@ -131,7 +131,7 @@ header {
 
   .post-comments {
     display: block;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 
     a {
       display: block;
@@ -431,4 +431,7 @@ header {
       align-self: center;
     }
   }
+}
+.number-likes-comments{
+  padding-top: 10px;
 }
