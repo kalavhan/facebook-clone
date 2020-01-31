@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'users/index'
+  get '/users', to: "users#index", as: :users
   resources :posts
   devise_for :users,
   :skip => [:registrations, :sessions]

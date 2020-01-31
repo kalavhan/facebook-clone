@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
   def index
     @post = Post.new
-    @posts = Post.where(user_id: current_user.id)
+    @posts = Post.find_user_posts(current_user.id)
   end
 
   def show; end

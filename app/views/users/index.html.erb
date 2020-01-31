@@ -1,0 +1,11 @@
+<div class="container">
+  <% @users.each do |user|%>
+    <div class="card user-item">
+      <div class="grouped-items">
+        <%= gravatar_for user, size: 50 %>
+        <h4><%= user.first_name %> <%= user.last_name %></h4>
+      </div>
+      <a class="darken-4 btn-flat follow-btn"><i class="material-icons left">group_add</i>Add Friend</a>
+    </div>
+  <% end %>
+</div>
