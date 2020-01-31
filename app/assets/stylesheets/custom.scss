@@ -1,0 +1,53 @@
+@import "materialize";
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  nav {
+    padding: 0 10px 0 150px;
+    background-color: #3b5998 !important;
+
+    h2 {
+      color: #fff !important;
+    }
+  }
+  position: relative;
+  form {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex !important;
+    justify-content: space-between;
+    width: 550px;
+
+    input[type=email],
+    input[type=password]{
+      width: 200px !important;
+      background-color: white !important;
+      border-radius: 5px !important;
+      margin-right: 30px;
+      padding: 0 9px !important;
+      height: 35px !important;
+      margin-top: -5px !important;
+    }
+
+    input[type=submit] {
+      background-color: #3d62b4 !important;
+      padding: 6px 25px !important;
+      border: none;
+      color: white;
+      font-size: 17px;
+      margin-top: -4px !important;
+      border-radius: 3px;
+
+      &:hover {
+        background-color: #3b5998 !important;
+        padding: 5px 24px !important;
+        border: 1px solid rgb(51, 40, 40);
+      }
+    }
+  }
+}

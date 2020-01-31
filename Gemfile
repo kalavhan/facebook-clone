@@ -7,6 +7,7 @@ ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
+gem 'materialize-sass'
 # Use postgresql as the database for Active Record
 gem 'devise'
 gem 'omniauth-facebook'
