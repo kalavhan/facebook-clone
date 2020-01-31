@@ -131,7 +131,7 @@ header {
 
   .post-comments {
     display: block;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 
     a {
       display: block;
@@ -400,4 +400,8 @@ header {
   .posts {
     width: 55%;
   }
+}
+
+.number-likes-comments{
+  padding-top: 10px;
 }
