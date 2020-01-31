@@ -127,6 +127,7 @@ header {
   background-color: #fff;
   padding: 15px;
   margin-top: 20px;
+  overflow-wrap: break-word;
 
   h4 {
     margin: 0 !important;
@@ -136,6 +137,35 @@ header {
 
   i {
     font-size: 17px;
+  }
+
+  .new-comment {
+    margin-top: 10px;
+  }
+
+  .users-comments {
+    margin-top: 10px;
+    .comment {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      
+      img {
+        border-radius: 50%;
+      }
+
+      .comment-user-content{
+        width: 87%;
+          .comment-user{
+            float: left;
+            margin-right: 5px !important;
+          }
+      }
+    }
+    .comment-time {
+      margin-left: 63px;
+    }
   }
 }
 
