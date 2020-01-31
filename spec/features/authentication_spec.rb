@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.feature 'Authentications', type: :feature do
   before :each do
-    @user = User.create(first_name: 'User', last_name:'Smith', email: 'user@mail.com', password: '1234567')
+    @user = User.create(first_name: 'User', last_name: 'Smith', email: 'user@mail.com', password: '1234567')
   end
 
   it 'Should Signup' do
