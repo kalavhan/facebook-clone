@@ -1,0 +1,19 @@
+<header>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo big-logo">Fakebook</a>
+      <% if user_signed_in? %>
+        <ul id="nav-mobile" class="right hide-on-med-and-down mid">
+          <li><%= link_to "Home", root_path %></a></li>
+          <li><%= link_to "Profile", profile_path %></a></li>
+          <li><%= link_to "Find Friends", users_path %></a></li>
+          <li><%= link_to "Log out", signout_path, method: :delete %></a></li>
+        </ul>
+      <% else %>
+        <ul>
+          <%= render 'layouts/signin' %>
+        </ul>
+      <% end %>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,386 @@
+@import 'materialize';
+
+* {
+  box-sizing: border-box;
+}
+
+*::placeholder {
+  color: #8d949e;
+}
+
+body {
+  background-color: #e9ebee;
+}
+
+header {
+  width: 100%;
+  nav {
+    padding: 0 10px 0 150px;
+    background-color: #3b5998 !important;
+
+    h2 {
+      color: #fff !important;
+    }
+
+    ul {
+      li {
+        a {
+          &:visited {
+            color: white !important;
+          }
+        }
+      }
+    }
+  }
+  position: relative;
+  form {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex !important;
+    justify-content: space-between;
+    width: 700px;
+
+    input[type='email'],
+    input[type='password'] {
+      width: 200px !important;
+      background-color: white !important;
+      border-radius: 5px !important;
+      margin-right: 30px;
+      padding: 0 9px !important;
+      height: 35px !important;
+      margin-top: -5px !important;
+    }
+
+    input[type='submit'] {
+      background-color: #3d62b4 !important;
+      padding: 6px 25px !important;
+      border: none;
+      color: white;
+      font-size: 17px;
+      margin-top: -4px !important;
+      border-radius: 3px;
+
+      &:hover {
+        background-color: #3b5998 !important;
+        padding: 5px 24px !important;
+        border: 1px solid rgb(51, 40, 40);
+      }
+    }
+
+    input[type='checkbox'] {
+      opacity: 1 !important;
+      margin-left: -20px !important;
+    }
+
+    .check-box {
+      margin-top: 5px !important;
+    }
+  }
+
+  .big-logo {
+    color: white !important;
+
+    &:hover {
+      background-color: inherit;
+    }
+  }
+}
+
+.mid {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  height: 100% !important;
+}
+
+.content-box {
+  width: 500px;
+  margin: auto;
+}
+
+.post-container {
+  padding-top: 10px;
+}
+
+.textarea {
+  width: 100% !important;
+  height: 100px;
+  font-size: 16px;
+  background-color: white !important;
+  border: none;
+  resize: none;
+  margin-right: 30px;
+  padding: 22px;
+  margin-top: -5px !important;
+}
+
+.new-post-button {
+  width: 100%;
+  border: none;
+  background-color: #3b5998;
+  color: white;
+  padding: 7px 15px;
+}
+
+.post-card {
+  background-color: #fff;
+  padding: 15px;
+  margin-top: 20px;
+
+  h4 {
+    margin: 0 !important;
+    font-size: 16px;
+    color: #3d62b4;
+  }
+
+  i {
+    font-size: 17px;
+  }
+}
+
+.post-date {
+  color: #616770;
+  font-size: 12px;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+
+  a {
+    color: #fff;
+    background-color: #3b5998;
+    &:hover {
+      color: #fff;
+      background-color: #3b5998;
+    }
+  }
+}
+
+.big-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.flex-items {
+  display: flex;
+  width: 78%;
+  margin: 0 auto;
+
+  .image {
+    margin-top: -50px;
+    height: 350px;
+    background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yi/r/OBaVg52wtTZ.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .card {
+    width: 450px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-top: 30px;
+
+    p {
+      margin: 3px 0 20px 0;
+      font-size: 15px;
+      color: #616770;
+    }
+
+    h2 {
+      margin: 7px 0 0 0;
+      font-size: 32px;
+      font-weight: bolder;
+    }
+
+    form {
+      width: 100%;
+      .flex-boxes {
+        display: flex;
+        justify-content: space-between;
+
+        .field {
+          width: 47%;
+        }
+      }
+
+      input[type='email'],
+      input[type='text'],
+      input[type='password'] {
+        border: 1px solid #ccd0d5;
+        background-color: #f2f2f2;
+        box-sizing: border-box;
+        padding: 0 0 0 10px;
+        border-radius: 5px;
+        margin: 0 0 1px 0;
+      }
+
+      input[type='submit'] {
+        background-color: #00a400;
+        border: none;
+        padding: 7px 55px;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  h4 {
+    margin: 50px 0 0 0;
+    font-size: 23px;
+    font-weight: bold;
+  }
+
+  .hero-section {
+    max-width: 500px;
+  }
+}
+
+.user {
+  width: 35%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+#danger {
+  margin: 0;
+  padding-top: 10px;
+}
+.flex {
+  display: flex;
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+.name {
+  margin: 0 0 0 15px;
+  align-self: flex-end;
+  font-size: 23px;
+  padding-bottom: 20px;
+  color: #fff;
+}
+
+.user-hero-section {
+  display: flex;
+  justify-content: space-between;
+  background-color:#1c1e21;
+  padding: 60px 15px 15px 25px;
+
+  .update-btn {
+    background: #f5f6f7;
+    border-color:rgba(0, 0, 0, .4); 
+    align-self: flex-end; 
+    color: #4b4f56; 
+  }
+}
+
+.update-section {
+  padding: 20px;
+  width: 450px;
+  margin: 0 auto;
+
+  form {
+    input[type=text],
+    textarea {
+      border: 1px solid #8b8d8f !important;
+      border-radius: 5px !important;
+      box-sizing: border-box !important;
+    }
+
+    input[type=text] {
+      padding: 0 0 0 15px !important;
+    }
+
+    textarea {
+      height: 70px;
+      resize: none;
+      padding: 10px 0 0 15px !important;
+    }
+
+    input[type=submit] {
+      width: 100%;
+      background-color: #3b5998;
+      padding: 10px 0;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+
+    select {
+      display: block !important;
+    }
+  }
+} 
+
+.user-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .details {
+    width: 30%;
+    padding: 15px;
+    margin-top: 20px;
+    height: 250px;
+
+    ul {
+      li {
+        display: flex;
+        
+        i {
+          color: #90949c;
+          margin-top: 5px;
+          margin-right: 5px;
+          align-self: center;
+        }
+      }
+    }
+  }
+
+  .posts {
+    width: 55%;
+  }
+}
+
+.user-item {
+  width: 450px;
+  margin: 20px auto 0 auto;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .follow-btn {
+    background-color: #3b5998;
+    color: white;
+    border-radius: 4px;
+  }
+
+  .grouped-items {
+    display: flex;
+
+    img {
+      height: 50px;
+      border-radius: 50%;
+      align-self: center;
+    }
+
+    h4 {
+      margin: 5px;
+      font-size: 23px;
+      align-self: center;
+    }
+  }
+}

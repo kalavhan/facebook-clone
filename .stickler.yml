@@ -15,3 +15,5 @@ files:
     - "Rakefile"
     - "spec/spec_helper.rb"
     - "spec/rails_helper.rb"
+    - "spec/features/authentication_spec.rb"
+    - "spec/features/profile_spec.rb"
