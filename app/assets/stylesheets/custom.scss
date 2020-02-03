@@ -402,6 +402,36 @@ header {
   }
 }
 
+.user-item {
+  width: 450px;
+  margin: 20px auto 0 auto;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .follow-btn {
+    background-color: #3b5998;
+    color: white;
+    border-radius: 4px;
+  }
+
+  .grouped-items {
+    display: flex;
+
+    img {
+      height: 50px;
+      border-radius: 50%;
+      align-self: center;
+    }
+
+    h4 {
+      margin: 5px;
+      font-size: 23px;
+      align-self: center;
+    }
+  }
+}
 .number-likes-comments{
   padding-top: 10px;
 }
