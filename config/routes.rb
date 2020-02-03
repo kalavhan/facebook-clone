@@ -1,13 +1,11 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-<<<<<<< HEAD
-  get 'users/index'
   get '/users', to: "users#index", as: :users
-=======
   get '/add_comment/:post_id', to: 'comments#new', as: :show_comment
   post '/add_comment/:post_id', to: 'comments#create', as: :create_comment
->>>>>>> Basic comment, fucntionality and style
+  get '/add_like/:post_id', to: 'likes#create', as: :like
+  delete '/delete_like/:post_id', to: 'likes#destroy', as: :unlike
   resources :posts
   devise_for :users,
   :skip => [:registrations, :sessions]
