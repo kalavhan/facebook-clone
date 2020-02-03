@@ -15,8 +15,26 @@
         </div>
         <p> <%= post.content %> </p>
         <div class="card-buttons">
-          <a class="btn-flat"><i class="material-icons left">thumb_up</i>Like</a>
-          <a class="darken-4 btn-flat"><i class="material-icons left">comment</i>comment</a>
+          <% if user_likes_post?(post.id) %>
+            <%= link_to unlike_path(post), method: :delete, class:'darken-4 btn-flat' do %>
+              <i class="material-icons left">thumb_down</i> Unlike
+            <% end %>
+          <% else %>
+            <%= link_to like_path(post), class:'darken-4 btn-flat' do %>
+              <i class="material-icons left">thumb_up</i> Like
+            <% end %>
+          <% end %>
+          <%= link_to show_comment_path(post), class:'darken-4 btn-flat' do %>
+            <i class="material-icons left">comment</i> comment
+          <% end %>
+        </div>
+        <div class="number-likes-comments">
+          <% if post.likes.any? %>
+          <span> <%= "#{pluralize(post.likes.count, 'like')}" %></span>
+          <% end %>
+          <% if post.comments.any? %>
+            <span class="post-comments right-align right"><%= link_to "#{pluralize(post.comments.count, 'comment')}", show_comment_path(post) %></span>
+          <% end %>
         </div>
       </div>
     <% end %>

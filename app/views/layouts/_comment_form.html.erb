@@ -1,0 +1,6 @@
+<%= form_for @comment, :url => create_comment_path(@post) do |f| %>
+  <%= f.text_area :content, size: "60x20", class: "textarea", placeholder: "Write a comment.." %>
+  <div class="actions">
+    <%= f.submit "Create comment", class: "new-post-button" %>
+  </div>
+<% end %>
