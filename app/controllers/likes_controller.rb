@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class LikesController < ApplicationController
   def create
     @like = Like.new
@@ -9,7 +11,7 @@ class LikesController < ApplicationController
 
   def destroy
     post_id = params[:post_id]
-    Like.where(["user_id = ? and post_id = ?", current_user.id, post_id]).destroy_all
+    Like.where(['user_id = ? and post_id = ?', current_user.id, post_id]).destroy_all
     redirect_to root_path
   end
 end
