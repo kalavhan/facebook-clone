@@ -36,12 +36,6 @@
             <span class="post-comments right-align right"><%= link_to "#{pluralize(post.comments.count, 'comment')}", show_comment_path(post) %></span>
           <% end %>
         </div>
-        <div class="number-likes-comments">
-          <span>10 Likes</span>
-          <% if post.comments.any? %>
-            <span class="post-comments right-align right"><%= link_to "#{pluralize(post.comments.count, 'comment')}", show_comment_path(post) %></span>
-          <% end %>
-        <div>
       </div>
     <% end %>
   </div>
