@@ -13,10 +13,18 @@ RSpec.feature 'Posts', type: :feature do
     fill_in 'session[email]', with: 'user@mail.com'
     fill_in 'session[password]', with: '1234567'
     click_button 'Log in'
-    click_on 'comment'
-    expect(page).to have_content('User')
-    fill_in 'comment[content]', with: 'First comment'
-    click_on 'Create comment'
-    expect(page).to have_content('1 comment')
+    click_on 'Like'
+    expect(page).to have_content('Unlike')
+  end
+
+  it 'Should delete a like from a post' do
+    visit root_path
+    fill_in 'session[email]', with: 'user@mail.com'
+    fill_in 'session[password]', with: '1234567'
+    click_button 'Log in'
+    click_on 'Like'
+    expect(page).to have_content('Unlike')
+    click_on 'Unlike'
+    expect(page).to have_content('Like')
   end
 end
