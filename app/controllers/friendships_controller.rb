@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class FriendshipsController < ApplicationController
   def create
     @friendship = Friendship.new
@@ -20,5 +22,4 @@ class FriendshipsController < ApplicationController
     @request.update(status: 'accepted')
     redirect_to received_requests_path
   end
-
 end

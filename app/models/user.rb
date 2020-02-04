@@ -21,20 +21,6 @@ class User < ApplicationRecord
     sent_requests.map { |friendship| friendship.sender_id if friendship.status = 'accepted' }.compact
   end
 
-  # def self.show_non_friends(user_id)
-  #   array = []
-  #   friends = Friendship.where('(sender_id = ? and status = ?) OR
-  #     (receiver_id = ? and status = ?)',
-  #                              user_id, 'accepted',
-  #                              user_id, 'accepted')
-  #   friends.each do |friend|
-  #     array.push(friend.receiver_id)
-  #     array.push(friend.sender_id)
-  #   end
-  #   users = User.where('id != ?', user_id)
-  #   users = users.reject { |user| array.include?(user.id) }
-  # end
-
   def self.all_friends(user_id)
     User.where('id != ?', user_id)
   end
