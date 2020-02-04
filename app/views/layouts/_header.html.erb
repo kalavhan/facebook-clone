@@ -8,7 +8,7 @@
           <li><%= link_to "Profile", profile_path %></a></li>
           <li><%= link_to "Find Friends", users_path %></a></li>
           <li>
-            <%= link_to received_requests_path(), class:'darken-4 btn-flat follow-btn pending-btn' do %>
+            <%= link_to received_requests_path(), class:'darken-4 btn-flat follow-btn pending-btn', id: 'notification' do %>
               <i class="material-icons">group</i>
               <% if pending_requests.positive? %>
                 <p class="float-p">
