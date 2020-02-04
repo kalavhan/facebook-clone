@@ -402,7 +402,7 @@ header {
   }
 }
 
-.user-item {
+.user-item, .pending-item {
   width: 450px;
   margin: 20px auto 0 auto;
   padding: 15px;
@@ -432,6 +432,26 @@ header {
     }
   }
 }
+.pending-item {
+  width: 550px !important;
+
+  .grouped-items{
+    width: 250px !important;
+  }
+}
 .number-likes-comments{
   padding-top: 10px;
+}
+
+.pending-btn{
+  position: relative;
+  
+  .float-p{
+    position: absolute;
+    bottom: 7%;
+    right: 5%;
+    background-color:#ff0000;
+    padding: 0 3px;
+    border-radius: 5px;
+  }
 }

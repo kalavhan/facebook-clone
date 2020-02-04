@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get '/add_friend/:friend_id', to: 'friendships#create', as: :send_request
+  put '/accept_friend/:sender_id', to: 'friendships#accept', as: :accept_request
+  put '/reject_friend/:sender_id', to: 'friendships#reject', as: :reject_request
+  get '/received_requests', to: 'users#show', as: :received_requests
   get '/users', to: "users#index", as: :users
   get '/add_comment/:post_id', to: 'comments#new', as: :show_comment
   post '/add_comment/:post_id', to: 'comments#create', as: :create_comment
