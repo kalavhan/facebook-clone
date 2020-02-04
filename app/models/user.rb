@@ -18,7 +18,7 @@ class User < ApplicationRecord
   validates_inclusion_of :status, in: ['Single', 'Married', 'In a relationship'], allow_nil: true
 
   def friends
-    sent_requests.map { |friendship| friendship.sender_id if friendship.status = 'accepted' }.compact
+    sent_requests.map { |friendship| friendship.sender_id if friendship.status == 'accepted' }.compact
   end
 
   def self.all_friends(user_id)
