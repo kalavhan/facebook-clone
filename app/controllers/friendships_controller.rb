@@ -10,8 +10,8 @@ class FriendshipsController < ApplicationController
   end
 
   def reject
-    @request = Friendship.get_request(current_user.id, params[:sender_id])
-    @request.update(status: 'rejected')
+    @request = Friendship.get_request(current_user.id, params[:sender_id])[0]
+    @request.destroy
     redirect_to received_requests_path
   end
 

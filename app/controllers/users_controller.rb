@@ -2,8 +2,7 @@
 
 class UsersController < ApplicationController
   def index
-    #@users = User.left_outer_joins(:received_requests).where('friendships.status = ?', 'accepted')
-    @users = User.show_non_friends(current_user.id)
+    @users = User.all_friends(current_user.id)
   end
 
   def show

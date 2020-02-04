@@ -1,17 +1,19 @@
 <div class="container">
-<p id="danger" class="center center-align green-text"><%= notice %></p>
+  <p id="danger" class="center center-align green-text"><%= notice %></p>
   <% @users.each do |user|%>
     <div class="card user-item">
       <div class="grouped-items">
         <%= gravatar_for user, size: 50 %>
         <h4><%= user.first_name %> <%= user.last_name %></h4>
       </div>
-      <% if request_sent?(user.id) %>
+      <% if request_sent?(user.id) == 'pending' %>
         <a class="waves-effect waves-light btn disabled"><i class="material-icons left">autorenew</i>Pending</a>
-      <% else %>
+      <% elsif request_sent?(user.id) == 'rejected' %>
         <%= link_to send_request_path(user.id), class:'darken-4 btn-flat follow-btn' do %>
-              <i class="material-icons left">group_add</i> Add Friend
+          <i class="material-icons left">group_add</i> Add Friend
         <% end %>
+      <% else %>
+        <%= nil %>
       <% end %>
     </div>
   <% end %>

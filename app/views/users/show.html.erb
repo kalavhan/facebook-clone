@@ -1,17 +1,20 @@
 <div class="container">
-<p id="danger" class="center center-align green-text"><%= notice %></p>
+  <p id="danger" class="center center-align green-text"><%= notice %></p>
+  <% if @requests.empty? %>
+    <h3 class="center center-align">No Pending Requests</h3>
+  <% end %>
   <% @requests.each do |request|%>
     <div class="card pending-item">
       <div class="grouped-items">
         <%= gravatar_for sender_information(request.sender_id), size: 50 %>
         <h4><%= sender_information(request.sender_id).first_name %> <%= sender_information(request.sender_id).last_name %></h4>
       </div>
-        <%= link_to accept_request_path(request.sender_id), method: :put, class:'darken-4 btn-flat follow-btn' do %>
-              <i class="material-icons left">check</i> Accept
-        <% end %>
-        <%= link_to reject_request_path(request.sender_id), method: :put, class:'darken-4 btn-flat follow-btn' do %>
-              <i class="material-icons left">close</i> Reject
-        <% end %>
+      <%= link_to accept_request_path(request.sender_id), method: :put, class:'darken-4 btn-flat follow-btn' do %>
+        <i class="material-icons left">check</i> Accept
+      <% end %>
+      <%= link_to reject_request_path(request.sender_id), method: :delete, class:'darken-4 btn-flat follow-btn' do %>
+        <i class="material-icons left">close</i> Reject
+      <% end %>
     </div>
   <% end %>
 </div>
