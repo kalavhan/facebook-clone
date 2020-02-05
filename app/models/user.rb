@@ -9,7 +9,8 @@ class User < ApplicationRecord
   has_many :sent_requests, foreign_key: 'sender_id', class_name: 'Friendship'
   has_many :received_requests, foreign_key: 'receiver_id', class_name: 'Friendship'
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :trackable
+         :recoverable, :rememberable, :validatable, :trackable, 
+         :omniauthable, omniauth_providers: [:facebook]
   validates :first_name, presence: true, length: { maximum: 25 }
   validates :last_name, presence: true, length: { maximum: 25 }
   validates :location, length: { maximum: 40 }
