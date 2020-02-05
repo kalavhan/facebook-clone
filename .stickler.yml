@@ -1,4 +1,3 @@
-# add the linters you want stickler to use for this project
 linters:
   rubocop:
     display_cop_names: true
@@ -13,6 +12,8 @@ files:
     - "config/*"
     - "Guardfile"
     - "Rakefile"
+    - "README.md"
+    - "node_modules/**/*"
     - "spec/spec_helper.rb"
     - "spec/rails_helper.rb"
     - "spec/features/authentication_spec.rb"
