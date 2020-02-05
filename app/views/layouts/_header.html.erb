@@ -7,6 +7,16 @@
           <li><%= link_to "Home", root_path %></a></li>
           <li><%= link_to "Profile", profile_path %></a></li>
           <li><%= link_to "Find Friends", users_path %></a></li>
+          <li>
+            <%= link_to received_requests_path(), class:'darken-4 btn-flat follow-btn pending-btn', id: 'notification' do %>
+              <i class="material-icons">group</i>
+              <% if pending_requests.positive? %>
+                <p class="float-p">
+                  <%= pending_requests %>
+                </p>
+              <% end %>
+            <% end %>
+          </li>
           <li><%= link_to "Log out", signout_path, method: :delete %></a></li>
         </ul>
       <% else %>

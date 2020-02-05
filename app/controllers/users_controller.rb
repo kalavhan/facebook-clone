@@ -2,6 +2,10 @@
 
 class UsersController < ApplicationController
   def index
-    @users = User.where('id != ?', current_user.id)
+    @users = User.all_friends(current_user.id)
+  end
+
+  def show
+    @requests = Friendship.where('receiver_id = ? and status = ?', current_user.id, 'pending')
   end
 end
