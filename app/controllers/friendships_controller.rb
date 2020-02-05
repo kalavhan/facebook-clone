@@ -18,6 +18,8 @@ class FriendshipsController < ApplicationController
   def accept
     @request = Friendship.get_request(current_user.id, params[:sender_id])
     @request.update(status: 'accepted')
+    Friendship.create(sender_id: current_user.id,
+                      receiver_id: params[:sender_id], status: 'accepted')
     redirect_to received_requests_path
   end
 end
