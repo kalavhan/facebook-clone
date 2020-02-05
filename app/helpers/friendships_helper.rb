@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module FriendshipsHelper
   def request_sent?(user_id)
     @sent = Friendship.where('(sender_id = ? and receiver_id = ?) OR (receiver_id = ? and sender_id = ?)',
