@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   delete '/delete_like/:post_id', to: 'likes#destroy', as: :unlike
   resources :posts
   devise_for :users,
+  :controllers => { :omniauth_callbacks => 'users/omniauth_callbacks' },
   :skip => [:registrations, :sessions]
   root to: "posts#index"
   

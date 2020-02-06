@@ -259,8 +259,7 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-
+  
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
@@ -296,4 +295,11 @@ Devise.setup do |config|
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
+  if ENV['RAILS_ENV'] == 'production'
+    config.omniauth :facebook, ENV['APP_ID'], ENV['APP_SECRET'],
+    callback_url: 'https://frozen-forest-23599.herokuapp.com/users/auth/facebook/callback'
+  else
+    config.omniauth :facebook, ENV['APP_ID'], ENV['APP_SECRET'],
+    callback_url: 'http://localhost:3000/users/auth/facebook/callback'
+  end
 end
