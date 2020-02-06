@@ -297,7 +297,7 @@ Devise.setup do |config|
   # config.sign_in_after_change_password = true
   if ENV['RAILS_ENV'] == 'production'
     config.omniauth :facebook, ENV['APP_ID'], ENV['APP_SECRET'],
-    callback_url: 'https://sheltered-woodland-02077.herokuapp.com/users/auth/facebook/callback'
+    callback_url: 'https://frozen-forest-23599.herokuapp.com/users/auth/facebook/callback'
   else
     config.omniauth :facebook, ENV['APP_ID'], ENV['APP_SECRET'],
     callback_url: 'http://localhost:3000/users/auth/facebook/callback'
