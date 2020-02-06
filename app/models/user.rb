@@ -24,9 +24,9 @@ class User < ApplicationRecord
     User.where('id != ?', user_id)
   end
 
-  def self.new_with_session(params, session) # rubocop:disable Lint/AssignmentInCondition
+  def self.new_with_session(params, session)
     super.tap do |user|
-      if data = session['devise.facebook_data'] && session['devise.facebook_data']['extra']['raw_info']
+      if (data = session['devise.facebook_data'] && session['devise.facebook_data']['extra']['raw_info'])
         user.email = data['emai'] if user.email.blank?
       end
     end
