@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -9,7 +7,7 @@ class User < ApplicationRecord
   has_many :sent_requests, foreign_key: 'sender_id', class_name: 'Friendship'
   has_many :received_requests, foreign_key: 'receiver_id', class_name: 'Friendship'
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :trackable, 
+         :recoverable, :rememberable, :validatable, :trackable,
          :omniauthable, omniauth_providers: [:facebook]
   validates :first_name, presence: true, length: { maximum: 25 }
   validates :last_name, presence: true, length: { maximum: 25 }
@@ -29,7 +27,7 @@ class User < ApplicationRecord
   def self.new_with_session(params, session)
     super.tap do |user|
       if data = session['devise.facebook_data'] && session['devise.facebook_data']['extra']['raw_info']
-        user.email = data[“email”] if user.email.blank?
+        user.email = data['emai'] if user.email.blank?
       end
     end
   end
@@ -38,9 +36,9 @@ class User < ApplicationRecord
     p auth
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
-      user.password = Devise.friendly_token[0,20]
-      user.first_name = auth.info.name.split(" ")[0] # assuming the user model has a name
-      user.last_name = auth.info.name.split(" ")[1]
+      user.password = Devise.friendly_token[0, 20]
+      user.first_name = auth.info.name.split(' ')[0] # assuming the user model has a name
+      user.last_name = auth.info.name.split(' ')[1]
     end
   end
 end
