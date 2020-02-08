@@ -68,6 +68,10 @@ This project was built with Ruby on rails version 6
 - rails server to fire the rails server
 
 
+## Live Version
+
+- You can view the app [Here](https://frozen-forest-23599.herokuapp.com/)
+
 <!-- ROADMAP -->
 ## Roadmap
 
