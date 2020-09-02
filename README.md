@@ -7,7 +7,7 @@
   <p align="center">
     Facebook clone with the basic funcionalities of the social app, built with Ruby on Rails
     <br />
-    <a><strong>[Explore the docs »](#table-of-contents)</strong></a>
+    <a href="#table-of-contents"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     ·
