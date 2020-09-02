@@ -7,29 +7,31 @@
   <p align="center">
     Facebook clone with the basic funcionalities of the social app, built with Ruby on Rails
     <br />
-    <a href="https://github.com/kalavhan/facebook-clone/"><strong>Explore the docs »</strong></a>
+    <a><strong>[Explore the docs »](#table-of-contents)</strong></a>
     <br />
     <br />
+    ·
+    <a href="https://frozen-forest-23599.herokuapp.com/">Live version</a>
     ·
     <a href="https://github.com/kalavhan/facebook-clone/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/kalavhan/facebook-clone/issues">Request Feature</a>
   </p>
 </p>
 
+![Profile page](https://user-images.githubusercontent.com/47485749/92018305-373a8e00-ed12-11ea-913f-b0e51f42ff85.png)
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
 * [About the Project](#about-the-project)
+  * [Functions](#functions)
   * [Built With](#built-with)
-* [Use](#use)
+* [Prerequisites](#prerequisites)
+* [Setup](#setup)
+* [Usage](#usage)
+* [Live Version](#live-version)
 * [Roadmap](#roadmap)
 * [License](#license)
-* [Contact](#contact)
-
-
-![Profile page](https://user-images.githubusercontent.com/47485749/92018305-373a8e00-ed12-11ea-913f-b0e51f42ff85.png)
+* [Authors](#authors)
 
 
 <!-- ABOUT THE PROJECT -->
@@ -38,7 +40,7 @@
 This project is a Facebook clone, imitating the design and basic behavior for learning purposes
 Requirements for this project can be found [Here](https://www.theodinproject.com/courses/ruby-on-rails/lessons/final-project).
 
-## Functionality
+## Functions
  - Create an account
  - Log in to account
  - Homepage
