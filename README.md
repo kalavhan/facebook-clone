@@ -5,7 +5,7 @@
  
   <h3 align="center">Fakebook</h3>
   <p align="center">
-    Facebook clone application from the ruby on rails section of the microverse curriculum
+    Facebook clone with the basic funcionalities of the social app, built with Ruby on Rails
     <br />
     <a href="https://github.com/kalavhan/facebook-clone/"><strong>Explore the docs »</strong></a>
     <br />
@@ -29,48 +29,76 @@
 * [Contact](#contact)
 
 
+![Profile page](https://user-images.githubusercontent.com/47485749/92018305-373a8e00-ed12-11ea-913f-b0e51f42ff85.png)
+
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project requests you to build a Facebook-like social network application.
+This project is a Facebook clone, imitating the design and basic behavior for learning purposes
+Requirements for this project can be found [Here](https://www.theodinproject.com/courses/ruby-on-rails/lessons/final-project).
 
-Full task description: [https://www.theodinproject.com/courses/ruby-on-rails/lessons/final-project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/final-project).
+## Functionality
+ - Create an account
+ - Log in to account
+ - Homepage
+ - Add friends
+ - Reject a friend request
+ - Create posts
+ - Comment posts
+ - Like posts
+ - Profile page
+ - Edit personal information
+ - Create an account with a facebook account
 
 ### Built With
 
-This project was built with Ruby on rails version 6
+ - Ruby on Rails 6
+ - ERB
+ - SCSS
 
 ## Prerequisites
  - Git
  - Ruby
- - Ruby on rails version 6
+ - Ruby on Rails 6
  - Yarn
  - Node.js
  - NPM
  - PostgreSQL
 
 
-## Getting Started
+## Setup
 
-- git clone https://github.com/kalavhan/facebook-clone.git
+Use the [git](https://git-scm.com/downloads) to clone the project to your local machine.
+```sh
+$ git clone https://github.com/kalavhan/facebook-clone.git
+```
 
-- cd facebook-clone
+Navigate to the extracted folder
+```sh 
+cd facebook-clone
+```
 
-- bundle update
+Install and update the gems
+```sh
+$ bundle install
+$ bundle update
+```
 
-- bundle install
+Create and populate the database
+```sh
+$ rails db:create
+$ rails db:install
+```
 
-- rails db:create
-
-- rails db:migrate (to add tables and columns)
-
-- rails server to fire the rails server
-
+### Usage
+```sh
+$ rails s
+```
 
 ## Live Version
 
-- You can view the app [Here](https://frozen-forest-23599.herokuapp.com/)
+- You can use the app [Here](https://frozen-forest-23599.herokuapp.com/)
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -83,12 +111,16 @@ See the [open issues](https://github.com/kalavhan/facebook-clone/issues) for a l
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-<!-- CONTACT -->
-## Contact
-Josue Brigido - [Github profile](https://github.com/kalavhan)
-Ferguson Iyara - [Github profile](https://github.com/fegzycole)
+<!-- Authors -->
+## Authors
 
-Project Link: [Project repo](https://github.com/kalavhan/facebook-clone/)
+👤 **Josue Brigido**
+
+[Github](https://github.com/kalavhan) | [Twitter](https://twitter.com/kalavhan) | [LinkedIn](https://linkedin.com/in/kalavhan)
+
+👤 **Ferguson Iyara**
+
+[Github](https://github.com/fegzycole) | [Twitter](https://twitter.com/fergusoniyara) | [LinkedIn](https://www.linkedin.com/in/fergusoniyara/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
