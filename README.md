@@ -26,7 +26,7 @@
   * [Functions](#functions)
   * [Built With](#built-with)
 * [Screenshots](#screenshots)
-* [Installation])(#installation)
+* [Installation](#installation)
   * [Prerequisites](#prerequisites)
   * [Setup](#setup)
   * [Usage](#usage)
