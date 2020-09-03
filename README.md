@@ -5,7 +5,7 @@
  
   <h3 align="center">Fakebook</h3>
   <p align="center">
-    Facebook clone with the basic funcionalities of the social app, built with Ruby on Rails
+    Web social media app with the core functions of facebook, built with Ruby on Rails
     <br />
     <a href="#table-of-contents"><strong>Explore the docs »</strong></a>
     <br />
@@ -17,7 +17,7 @@
   </p>
 </p>
 
-![Profile page](https://user-images.githubusercontent.com/47485749/92018305-373a8e00-ed12-11ea-913f-b0e51f42ff85.png)
+![home](https://user-images.githubusercontent.com/47485749/92153141-04ab9680-ede1-11ea-90c6-76e8aea7f9f1.png)
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -25,13 +25,15 @@
 * [About the Project](#about-the-project)
   * [Functions](#functions)
   * [Built With](#built-with)
-* [Prerequisites](#prerequisites)
-* [Setup](#setup)
-* [Usage](#usage)
+* [Screenshots](#screenshots)
+* [Installation])(#installation)
+  * [Prerequisites](#prerequisites)
+  * [Setup](#setup)
+  * [Usage](#usage)
 * [Live Version](#live-version)
 * [Roadmap](#roadmap)
 * [License](#license)
-* [Authors](#authors)
+* [Contact](#contact)
 
 
 <!-- ABOUT THE PROJECT -->
@@ -40,7 +42,7 @@
 This project is a Facebook clone, imitating the design and basic behavior for learning purposes
 Requirements for this project can be found [Here](https://www.theodinproject.com/courses/ruby-on-rails/lessons/final-project).
 
-## Functions
+### Features
  - Create an account
  - Log in to account
  - Homepage
@@ -54,12 +56,23 @@ Requirements for this project can be found [Here](https://www.theodinproject.com
  - Create an account with a facebook account
 
 ### Built With
-
  - Ruby on Rails 6
  - ERB
  - SCSS
 
-## Prerequisites
+## Screenshots
+### Login / Signup
+![home](https://user-images.githubusercontent.com/47485749/92153141-04ab9680-ede1-11ea-90c6-76e8aea7f9f1.png)
+
+### Home
+![post](https://user-images.githubusercontent.com/47485749/92152990-d037da80-ede0-11ea-94a7-8cb0c5a5900a.png)
+
+### Profile
+![Profile page](https://user-images.githubusercontent.com/47485749/92018305-373a8e00-ed12-11ea-913f-b0e51f42ff85.png)
+
+
+## Installation
+### Prerequisites
  - Git
  - Ruby
  - Ruby on Rails 6
@@ -68,9 +81,7 @@ Requirements for this project can be found [Here](https://www.theodinproject.com
  - NPM
  - PostgreSQL
 
-
-## Setup
-
+### Setup
 Use the [git](https://git-scm.com/downloads) to clone the project to your local machine.
 ```sh
 $ git clone https://github.com/kalavhan/facebook-clone.git
@@ -99,12 +110,10 @@ $ rails s
 ```
 
 ## Live Version
-
-- You can use the app [Here](https://frozen-forest-23599.herokuapp.com/)
+You can use the app [Here](https://frozen-forest-23599.herokuapp.com/)
 
 <!-- ROADMAP -->
 ## Roadmap
-
 See the [open issues](https://github.com/kalavhan/facebook-clone/issues) for a list of proposed features (and known issues).
 
 
@@ -113,8 +122,8 @@ See the [open issues](https://github.com/kalavhan/facebook-clone/issues) for a l
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-<!-- Authors -->
-## Authors
+<!-- Contact -->
+## Contact
 
 👤 **Josue Brigido**
 
